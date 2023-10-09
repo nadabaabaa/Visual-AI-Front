@@ -1,0 +1,52 @@
+    .custom-card {
+        background-color: hsla(0, 0%, 100%, 0.8);
+    }
+    
+    .KNOW-more-about {
+        min-width: 70px;
+        background-color: #FCA311;
+        padding-top: var(--dl-space-space-triplequarterunit);
+        padding-left: var(--dl-space-space-unitandahalfunit);
+        border-radius: 1.875rem;
+        padding-right: var(--dl-space-space-unitandahalfunit);
+        padding-bottom: var(--dl-space-space-triplequarterunit);
+        color: #d4d4d4;
+    }
+    
+    .try-now-button1 {
+        min-width: 70px;
+        background-color: #14213D;
+        padding-top: var(--dl-space-space-triplequarterunit);
+        padding-left: var(--dl-space-space-unitandahalfunit);
+        border-radius: 1.875rem;
+        padding-right: var(--dl-space-space-unitandahalfunit);
+        padding-bottom: var(--dl-space-space-triplequarterunit);
+        color: #d4d4d4;
+        text-decoration: none;
+    }
+    
+    a.try-now-button1 {
+        background-color: #14213D;
+    }
+    
+    .btn.btn-primary.mt-3 {
+        border-color: white;
+        /* Définissez la couleur de la bordure sur blanc */
+        background-color: #FCA311;
+        /* Définissez la couleur de l'arrière-plan selon vos besoins */
+        color: #d4d4d4;
+        /* Définissez la couleur du texte selon vos besoins */
+    }
+    
+    .collapse {
+        color: black;
+    }
+    
+    .darkmode {
+        color: white;
+    }
+    /* Styles pour le mode clair */
+    
+    .lightmode {
+        color: black;
+    }

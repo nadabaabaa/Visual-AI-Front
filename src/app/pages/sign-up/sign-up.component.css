@@ -1,0 +1,14 @@
+:host {
+    display: contents;
+}
+
+.sign-up-button {
+    min-width: 70px;
+    background-color: #14213D;
+    padding-top: var(--dl-space-space-triplequarterunit);
+    padding-left: var(--dl-space-space-unitandahalfunit);
+    border-radius: 1.875rem;
+    padding-right: var(--dl-space-space-unitandahalfunit);
+    padding-bottom: var(--dl-space-space-triplequarterunit);
+    color: #d4d4d4;
+}

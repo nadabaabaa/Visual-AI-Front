@@ -1,0 +1,108 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.">
+    <!-- Utilize the Bootstrap 5 CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+    <!-- Utilize the Bootstrap 5 JavaScript (Bundle) link -->
+</head>
+
+
+
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- Navbar logo or brand -->
+
+
+            <!-- Navbar toggle button for small screens -->
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#">
+                            <img src="assets/logocybiris.png" alt="Logo" class="header-image" />
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{{ 'HomeButtonText' | translate }}</a>
+                    </li>
+
+                    <!-- Products -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/products">{{ 'ProductsButtonText' | translate }}</a>
+                    </li>
+
+                    <!-- Company -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/company">{{ 'CompanyButtonText' | translate }}</a>
+                    </li>
+
+                    <!-- Sign In -->
+                    <div class="sign-in-button-container">
+                        <a routerLink="/sign-in" class="sign-in-button-sign-in-button">
+                            {{ 'SignInButtonText' | translate }}
+                        </a>
+                    </div>
+
+                    <!-- Language Buttons -->
+                    <div class="form-check form-switch ml-0">
+                        <!-- form -->
+                        <input type="checkbox" class="form-check-input" (click)="toggleTheme()">
+                        <button class="form-check-label" (click)="toggleTheme()">{{ 'LightDarkButtonText' | translate }}</button>
+                        <button (click)="changeLanguage('fr')">{{ 'SwitchToFrenchButtonText' | translate }}</button>
+                        <button (click)="changeLanguage('en')">{{ 'SwitchToEnglishButtonText' | translate }}</button>
+
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+
+    </nav>
+
+
+
+    <!-- Link to Bootstrap 5 JavaScript Bundle (required for toggling) -->
+    <script>
+        // Vérifiez si le thème est déjà en mode sombre
+        if (localStorage.getItem('theme') === 'dark') {
+            setDarkMode(true);
+        }
+
+        function setDarkMode(initialLoad = false) {
+            let isDark = document.body.classList.toggle('darkmode');
+
+            // Changer l'image de fond en fonction du mode
+            if (isDark) {
+                document.body.style.backgroundImage = 'url("assets/photo.jpg ")';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.style.backgroundImage = 'url("assets/photo2.jpg ")';
+                localStorage.removeItem('theme');
+            }
+
+            // Cochez la case uniquement lors du chargement initial
+            if (initialLoad) {
+                document.getElementById('checkbox').checked = isDark;
+            }
+        }
+    </script>
+
+
+</body>
+
+
+</html>

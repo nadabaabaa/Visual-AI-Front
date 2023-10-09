@@ -1,0 +1,35 @@
+                           :host {
+                              display: contents;
+                          }
+                          
+                          .header-image {
+                              width: 70px;
+                              height: 70px;
+                              object-fit: cover;
+                              margin-top: -20px;
+                          }
+                          
+                          .sign-in-button-sign-in-button {
+                              min-width: 70px;
+                              float: right;
+                              outline: none;
+                              background-color: #14213D;
+                              padding-top: var(--dl-space-space-triplequarterunit);
+                              padding-left: var(--dl-space-space-unitandahalfunit);
+                              border-radius: 1.875rem;
+                              padding-right: var(--dl-space-space-unitandahalfunit);
+                              padding-bottom: var(--dl-space-space-triplequarterunit);
+                              color: #d4d4d4;
+                              text-decoration: none;
+                          }
+                          /* Définir la couleur du texte lorsque le bouton est enfoncé */
+                          
+                          .sign-in-button-sign-in-button:active {
+                              color: #d4d4d4 !important;
+                              /* Assurez-vous que la couleur reste blanche */
+                          }
+                          /* Augmentez la spécificité pour assurer que la bordure reste visible */
+                          
+                          a.sign-in-button-sign-in-button {
+                              background-color: #14213D;
+                          }

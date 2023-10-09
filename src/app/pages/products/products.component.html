@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('/assets/photo2.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <div [ngClass]="{ 'darkmode': themeService.isDarkTheme(), 'lightmode': !themeService.isDarkTheme() }">
+
+        <div class="container-fluid bg-light">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <app-header rootClassName="header-root-class-name3"></app-header>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4 custom-card">
+                        <div class="card-body">
+                            <h1 class="card-title">{{ 'categoryRecognitionTitle' | translate }}</h1>
+                            <p class="card-text">{{ 'categoryRecognitionText' | translate }}</p>
+                            <a routerLink="/sign-in" class="btn try-now-button">{{ 'TryNowButtonText' | translate }}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4 custom-card">
+                        <div class="card-body">
+                            <h1 class="card-title">{{ 'facialRecognitionTitle' | translate }}</h1>
+                            <p class="card-text">{{ 'facialRecognitionText' | translate }}</p>
+                            <a routerLink="/sign-in" class="btn try-now-button">{{ 'TryNowButtonText' | translate }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <app-footer></app-footer>
+    </div>
+</body>
+
+</html>

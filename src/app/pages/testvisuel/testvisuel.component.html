@@ -1,0 +1,39 @@
+<div [ngClass]="{ 'darkmode': themeService.isDarkTheme(), 'lightmode': !themeService.isDarkTheme() }">
+    <div class="conversation-container">
+        <a routerLink="/" class="conversation-log-out-button button">
+            <span>
+                <span class="ButtonSmall conversation-text01">{{ 'LogOutButton' | translate }}</span>
+            </span>
+        </a>
+        <div class="form-check form-switch ml-0">
+            <!-- form -->
+            <input type="checkbox" class="form-check-input" (click)="toggleTheme()">
+            <button class="form-check-label" (click)="toggleTheme()">{{ 'LightDarkButton' | translate }}</button>
+        </div>
+        <br />
+        <div class="conversation-container1">
+            <!-- Le contenu de conversation-container1 -->
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 d-flex align-items-center">
+                    <div>
+                        <webcam [height]="500" [width]="500" [trigger]="triggerObservable" (imageCapture)="handleImage($event)" *ngIf="showWebcam" [allowCameraSwitch]="allowCameraSwitch" [switchCamera]="nextWebcamObservable" [videoOptions]="videoOptions" [imageQuality]="1" (cameraSwitched)="cameraWasSwitched($event)"
+                            (initError)="handleInitError($event)"></webcam> <br>
+                        <button (click)="triggerSnapshot();">{{ 'TakeSnapshotButton' | translate }}</button>
+                        <button (click)="toggleWebcam();">{{ 'ToggleWebcamButton' | translate }}</button>
+                        <br>
+                        <input id="cameraSwitchCheckbox" type="checkbox" [(ngModel)]="allowCameraSwitch"><label for="cameraSwitchCheckbox">{{ 'AllowCameraSwitchLabel' | translate }}</label>
+                        <br> {{ 'DeviceIdLabel' | translate }}: <input id="deviceId" type="text" [(ngModel)]="deviceId" style="width: 500px">
+                    </div>
+                    <div class="snapshot" *ngIf="webcamImage">
+                        <h2>{{ 'SnapshotTitle' | translate }}</h2>
+                        <img [src]="webcamImage.imageAsDataUrl" alt="{{ 'WebcamImageAltText' | translate }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

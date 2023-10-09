@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('/assets/photo2.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid bg-light">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <app-header rootClassName="header-root-class-name3"></app-header>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div [ngClass]="{ 'darkmode': themeService.isDarkTheme(), 'lightmode': !themeService.isDarkTheme() }">
+        <div class="conversation-container">
+            <a routerLink="/" class="conversation-log-out-button button">
+                <span>
+      <span class="ButtonSmall conversation-text01">LOG OUT</span>
+                <br />
+                </span>
+            </a>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 d-flex align-items-center">
+                        <span class="conversation-text03">Conversations </span>
+                    </div>
+                    <div>
+                        <br>
+                        <input type="file" (change)="onFileSelected($event)">
+
+                        <button type="button " class="conversation-button2 button " (click)="onUpload()">
+          search
+        </button>
+                    </div>
+                    <a routerLink="/testvisuel" class="conversation-log-out-button button">
+                        <span>
+                        <span class="ButtonSmall conversation-text01">start your visuel conversation</span>
+                        <br />
+                        </span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>

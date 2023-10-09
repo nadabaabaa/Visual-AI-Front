@@ -1,0 +1,127 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.">
+    <!-- Utilize the Bootstrap 5 CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="..." crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Utilize the Bootstrap 5 JavaScript (Bundle) link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    <style>
+        body {
+            background-image: url('/assets/photo2.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div [ngClass]="{ 'darkmode': themeService.isDarkTheme(), 'lightmode': !themeService.isDarkTheme() }">
+
+        <div class="container-fluid bg-light">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <app-header rootClassName="header-root-class-name3"></app-header>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container mt-5">
+            <section class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-4 custom-card">
+                                <div class="card-body">
+                                    <h1 class="card-title">{{ 'VisualAITitle' | translate }}</h1>
+                                    <h1 class="card-title HeadingOne">{{ 'ChooseTheBestTitle' | translate }}</h1>
+                                    <p class="card-text">{{ 'VisualAIText' | translate }}</p>
+                                    <div class="col-md-6">
+                                        <div class=" p-3">
+                                            <a routerLink="/sign-in" class="try-now-button1">{{ 'TryNowButtonText' | translate }}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <video width="640" height="360" autoplay loop>
+                                <source src="assets/homevideo.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <p>
+                            <button class="KNOW-more-about col-md-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                {{ 'KnowMoreAboutComputerVisionButton' | translate }}
+                            </button>
+                        </p>
+                        <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                                {{ 'ComputerVisionDescription' | translate }}
+                                <div class=" p-3">
+                                    <a routerLink="/sign-in" class="try-now-button1">{{ 'TryNowButton' | translate }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $(document).ready(function() {
+                        // Initialise le collapse de Bootstrap
+                        $('.collapse').collapse();
+                    });
+                </script>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-4 custom-card">
+                                <div class="card-body">
+                                    <h2 class="home-text23">{{ 'JoinUsInOurJourneyTitle' | translate }}</h2>
+                                    <p class="home-text24">{{ 'WeGotYouText' | translate }}</p>
+                                    <p class="home-text25">
+                                        {{ 'CybirisCommitmentTitle' | translate }} {{ 'CybirisCommitmentText' | translate }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container home-container18 Lead ">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2 class="home-text26 HeadingOne"><span>{{ 'SayHi' | translate }}</span></h2>
+                            <p class="home-text28 Lead">{{ 'TalkWithYou' | translate }}</p>
+                            <form class="home-form1">
+                                <div class="mb-3">
+                                    <label for="fullName" class="form-label home-text29 Label">{{ 'MyNameIs' | translate }}</label>
+                                    <input type="text" class="form-control home-textinput Small input" id="fullName">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label home-text30 Label">{{ 'Message' | translate }}</label>
+                                    <input type="text" class="form-control home-textinput1 Small input" id="message">
+                                </div>
+                                <button class="btn btn-primary mt-3">{{ 'SendMessage' | translate }}</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+        <app-footer></app-footer>
+
+    </div>
+</body>
