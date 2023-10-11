@@ -9,6 +9,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core'
 import { TranslateHttpLoader } from '@ngx-translate/http-loader'
 import { createTranslateLoader } from '../app.module'
 import { LanguageService } from '../language.service'
+import { FormsModule, NgModel } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { LanguageService } from '../language.service'
         useFactory: createTranslateLoader,
         deps: [HttpClient],
       },
-    }),],
+    }), ],
   exports: [
     Footer,
     Header,

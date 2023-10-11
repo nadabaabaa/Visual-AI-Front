@@ -5,6 +5,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms'; // Import F
 import { ThemeService } from 'src/app/theme.service';
 import { TranslateService } from '@ngx-translate/core';
 
+
 @Component({
   selector: 'sign-up',
   templateUrl: 'sign-up.component.html',

@@ -2,7 +2,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA, APP_INITIALIZER } from '@angular/core
 import { RouterModule } from '@angular/router'
 import { BrowserModule } from '@angular/platform-browser'
 import {WebcamModule} from './modules/webcam/webcam.module';
-import { FormsModule } from '@angular/forms'; // Import this line
+import { FormsModule, NgModel } from '@angular/forms'; // Import this line
 
 import { ComponentsModule } from './components/components.module'
 import { AppComponent } from './app.component'
@@ -23,7 +23,7 @@ export function appInitializerFactory(translate: TranslateService) {
 @NgModule({
   declarations: [AppComponent,],
   imports: [FormsModule , BrowserModule, AppRoutingModule, ComponentsModule, WebcamModule,HttpClientModule, TranslateModule.forRoot(),
-   ],
+ ],
    providers: [
     LanguageService, // Ajoutez le service ici
     {

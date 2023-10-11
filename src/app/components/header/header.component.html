@@ -17,60 +17,50 @@
 
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+        <div class="container-fluid">
+            <a class="nav-link" href="/#">
+                <img src="assets/logocybiris.png" alt="Logo" class="header-image" />
+            </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <!-- Navbar logo or brand -->
-
-
-            <!-- Navbar toggle button for small screens -->
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+            <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto ">
                     <li class="nav-item">
-                        <a class="nav-link" href="/#">
-                            <img src="assets/logocybiris.png" alt="Logo" class="header-image" />
-                        </a>
+                        <a class="nav-link mx-2 active" aria-current="page" href="#">{{ 'HomeButtonText' | translate }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{{ 'HomeButtonText' | translate }}</a>
+                        <a class="nav-link mx-2" href="/products">{{ 'ProductsButtonText' | translate }}</a>
                     </li>
-
-                    <!-- Products -->
                     <li class="nav-item">
-                        <a class="nav-link" href="/products">{{ 'ProductsButtonText' | translate }}</a>
+                        <a class="nav-link mx-2" href="/company">{{ 'CompanyButtonText' | translate }}</a>
                     </li>
 
-                    <!-- Company -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="/company">{{ 'CompanyButtonText' | translate }}</a>
+
+
+                </ul>
+                <ul class="navbar-nav ms-auto d-flex justify-content-end">
+                    <li class="nav-item mx-5">
+                        <div class="sign-in-button-container">
+                            <a href="/sign-in" class="sign-in-button-sign-in-button">
+                                {{ 'SignInButtonText' | translate }}
+                                </a>
+                        </div>
                     </li>
+                    <select (change)="changeLanguage($event)">
+                        <option value="fr">{{ 'SwitchToFrenchButtonText' | translate }}</option>
+                        <option value="en" class="flag-option"></option>
+                    </select>
 
-                    <!-- Sign In -->
-                    <div class="sign-in-button-container">
-                        <a routerLink="/sign-in" class="sign-in-button-sign-in-button">
-                            {{ 'SignInButtonText' | translate }}
-                        </a>
-                    </div>
-
-                    <!-- Language Buttons -->
-                    <div class="form-check form-switch ml-0">
-                        <!-- form -->
-                        <input type="checkbox" class="form-check-input" (click)="toggleTheme()">
-                        <button class="form-check-label" (click)="toggleTheme()">{{ 'LightDarkButtonText' | translate }}</button>
-                        <button (click)="changeLanguage('fr')">{{ 'SwitchToFrenchButtonText' | translate }}</button>
-                        <button (click)="changeLanguage('en')">{{ 'SwitchToEnglishButtonText' | translate }}</button>
-
-                    </div>
+                    <li class="nav-item mx-2">
+                        <div class="form-check form-switch ml-0">
+                            <!-- form -->
+                            <input type="checkbox" class="form-check-input" (click)="toggleTheme()"></div>
+                    </li>
                 </ul>
             </div>
         </div>
-
-
     </nav>
 
 

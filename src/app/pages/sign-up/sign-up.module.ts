@@ -22,4 +22,5 @@ const routes = [
   exports: [SignUp],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
+
 export class SignUpModule {}

@@ -38,6 +38,7 @@ export class Header implements OnInit  {
   frChecked = false; // Initialement, le français n'est pas sélectionné
   enChecked = false; // Initialement, l'anglais n'est pas sélectionné
   signInButtonText: string = 'Sign In';
+
   constructor(public themeService: ThemeService,public translate: TranslateService,public languageService: LanguageService ) {
 
   }
@@ -56,8 +57,11 @@ export class Header implements OnInit  {
       this.themeService.enableDarkMode();
     }
   }
-  changeLanguage(language: string): void {
-    this.languageService.setLanguage(language);
+ // changeLanguage(language: string): void {
+  //  this.languageService.setLanguage(language);
+ // }
+  changeLanguage(event: any): void {
+    const selectedLanguage = event.target.value; // Obtenez la langue sélectionnée depuis l'événement
+    this.languageService.setLanguage(selectedLanguage);
   }
- 
 }
