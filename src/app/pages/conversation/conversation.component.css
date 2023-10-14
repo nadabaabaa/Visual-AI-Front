@@ -80,7 +80,6 @@
 }
 
 .conversation-text03 {
-    color: var(--dl-color-secondary-700);
     width: auto;
     height: auto;
     align-self: center;
@@ -316,4 +315,15 @@
     .conversation-sidebar {
         height: 70vh;
     }
+}
+
+.darkmode {
+    color: white;
+}
+
+
+/* Styles pour le mode clair */
+
+.lightmode {
+    color: black;
 }

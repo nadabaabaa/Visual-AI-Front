@@ -15,50 +15,45 @@
 </head>
 
 <body>
-
-    <div class="container-fluid bg-light">
-        <div class="row">
-            <div class="col-12">
-                <app-header rootClassName="header-root-class-name3"></app-header>
-            </div>
-        </div>
-    </div>
     <div [ngClass]="{ 'darkmode': themeService.isDarkTheme(), 'lightmode': !themeService.isDarkTheme() }">
-        <div class="conversation-container">
-            <a routerLink="/" class="conversation-log-out-button button">
+
+        <div class="container-fluid bg-light">
+            <div class="row">
+                <div class="col-12">
+                    <app-header rootClassName="header-root-class-name3"></app-header>
+                </div>
+            </div>
+
+        </div>
+        <a routerLink="/" class="conversation-log-out-button button">
+            <span>
+          <span class="ButtonSmall conversation-text01">{{'LOG OUT'| translate}}</span>
+            <br />
+            </span>
+        </a>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-center">
+                    <span class="conversation-text03">Conversations </span>
+                </div>
+                <div>
+                    <br>
+                    <input type="file" (change)="onFileSelected($event)">
+
+                    <button type="button " class="conversation-button2 button " (click)="onUpload()">
+                        {{ 'search' | translate }}
+    </button>
+                </div>
+
+
+            </div>
+            <a routerLink="/testvisuel" class="conversation-log-out-button button">
                 <span>
-      <span class="ButtonSmall conversation-text01">LOG OUT</span>
+              <span class="ButtonSmall conversation-text01">{{'start your visuel conversation'| translate}}</span>
                 <br />
                 </span>
             </a>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 d-flex align-items-center">
-                        <span class="conversation-text03">Conversations </span>
-                    </div>
-                    <div>
-                        <br>
-                        <input type="file" (change)="onFileSelected($event)">
-
-                        <button type="button " class="conversation-button2 button " (click)="onUpload()">
-          search
-        </button>
-                    </div>
-                    <a routerLink="/testvisuel" class="conversation-log-out-button button">
-                        <span>
-                        <span class="ButtonSmall conversation-text01">start your visuel conversation</span>
-                        <br />
-                        </span>
-                    </a>
-
-                </div>
-
-            </div>
-
-
         </div>
-
     </div>
 
 </body>

@@ -12,3 +12,7 @@
 .lightmode {
     color: black;
 }
+
+.custom-card {
+    background-color: hsla(0, 0%, 100%, 0.8);
+}

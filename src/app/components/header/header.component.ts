@@ -57,11 +57,11 @@ export class Header implements OnInit  {
       this.themeService.enableDarkMode();
     }
   }
- // changeLanguage(language: string): void {
-  //  this.languageService.setLanguage(language);
- // }
-  changeLanguage(event: any): void {
-    const selectedLanguage = event.target.value; // Obtenez la langue sélectionnée depuis l'événement
-    this.languageService.setLanguage(selectedLanguage);
+  changeLanguage(language: string): void {
+    this.languageService.setLanguage(language);
   }
+ // changeLanguage(event: any): void {
+  //  const selectedLanguage = event.target.value; // Obtenez la langue sélectionnée depuis l'événement
+  //  this.languageService.setLanguage(selectedLanguage);
+  //}
 }

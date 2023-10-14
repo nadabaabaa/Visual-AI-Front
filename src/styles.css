@@ -185,5 +185,6 @@
 .darkmode {
     background-image: url('src/assets/photo.jpg');
     color: white;
-    /* Couleur du texte en mode sombre */
 }
+
+@import "~bootstrap/dist/css/bootstrap.css";

@@ -7,6 +7,7 @@ import { WebcamUtil } from 'src/app/modules/webcam/util/webcam.util';
 import { HttpClient } from '@angular/common/http';
 import { ThemeService } from 'src/app/theme.service';
 import { TranslateService } from '@ngx-translate/core';
+import { LanguageService } from 'src/app/language.service'
 
 @Component({
   selector: 'app-conversation',
@@ -14,7 +15,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['conversation.component.css'],
 })
 export class Conversation implements OnInit {
-  constructor(private title: Title, private meta: Meta , private http: HttpClient,public themeService: ThemeService ,private translate: TranslateService) {
+  constructor(private title: Title, private meta: Meta , private http: HttpClient,public themeService: ThemeService ,public translate: TranslateService,public languageService: LanguageService) {
     this.title.setTitle('conversation - Soft UI Pro')
     this.meta.addTags([
       {

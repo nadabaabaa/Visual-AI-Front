@@ -54,13 +54,16 @@
     "facialRecognitionTitle": "Reconnaissance faciale",
     "facialRecognitionText": "Découvrez la rapidité et la sécurité de l'identification faciale grâce à la technologie de reconnaissance faciale de Cybiris. Que vous téléchargiez une photo ou ouvriez votre appareil photo, notre système de pointe détecte et vérifie rapidement les identités. La reconnaissance faciale de Cybiris révolutionne la sécurité, garantissant un monde plus sûr et plus interconnecté.",
     "SendMessage": " envoyer un message",
-    "say HI": "contactez nous pour toute information suplémentaire",
-
+    "contactus": "contactez nous",
+    "mail": "Email",
 
     "1. Start": "1. Début",
     "2. Vision": "2. Vision",
     "3. Technology": "3. Technologie",
     "4. Security": "4. Sécurité",
     "5. Speed": "5. Vitesse",
-    "6. User-Friendly": "6. Convivialité"
+    "6. User-Friendly": "6. Convivialité",
+    "search": "chercher",
+    "start your visuel conversation": "commencez votre conversation visuelle",
+    "LOG OUT": "se Déconnecter"
 }
