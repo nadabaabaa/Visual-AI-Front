@@ -20,15 +20,15 @@
             <div class="custom-card">
                 <webcam [height]="500" [width]="500" [trigger]="triggerObservable" (imageCapture)="handleImage($event)" *ngIf="showWebcam" [allowCameraSwitch]="allowCameraSwitch" [switchCamera]="nextWebcamObservable" [videoOptions]="videoOptions" [imageQuality]="1" (cameraSwitched)="cameraWasSwitched($event)"
                     (initError)="handleInitError($event)"></webcam> <br>
-                <button class="actionBtn" (click)="triggerSnapshot();">Take A Snapshot</button>
-                <button class="actionBtn" (click)="toggleWebcam();">Click to Open/Close your Webcam</button>
+                <button class="actionBtn" (click)="triggerSnapshot();">prenez une photo </button>
+                <button class="actionBtn" (click)="toggleWebcam();">Cliquer pour ouvrir la caméra/fermer la caméra</button>
                 <br>
-                <br> DeviceId: <input id="deviceId" type="text" [(ngModel)]="deviceId" style="width: 500px">
+                <br> answer: <input id="deviceId" type="text" [(ngModel)]="deviceId" style="width: 500px">
             </div>
 
 
             <div class="snapshot" *ngIf="webcamImage">
-                <h2>Nice one!</h2>
+                <h2></h2>
                 <img [src]="webcamImage.imageAsDataUrl" alt="webcam image">
             </div>
 
