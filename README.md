@@ -1,4 +1,7 @@
 ![](src/assets/site1.png)
+![](src/assets/site2.png)
+![](src/assets/site3.png)
+
 
 Bienvenue dans le frontend de notre projet de développement web. Ce frontend est développé en Angular et est conçu pour intégrer la détection d'objets à travers la caméra des utilisateurs. 
 Le système d'authentification garantit un accès sécurisé aux fonctionnalités du site.
