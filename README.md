@@ -1,4 +1,3 @@
-<img src="src/assets/site1.png" width="100" height=100">
 ![](src/assets/site1.png)
 ![](src/assets/site2.png)
 ![](src/assets/site3.png)
