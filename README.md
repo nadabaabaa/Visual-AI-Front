@@ -1,3 +1,4 @@
+![](src/assets/site1.png)
 
 Bienvenue dans le frontend de notre projet de développement web. Ce frontend est développé en Angular et est conçu pour intégrer la détection d'objets à travers la caméra des utilisateurs. 
 Le système d'authentification garantit un accès sécurisé aux fonctionnalités du site.
@@ -19,4 +20,3 @@ Le système d'authentification garantit un accès sécurisé aux fonctionnalité
 3. **Installez les dépendances :** `npm install`
 4. **Lancez l'application :** `ng serve`
 5. **Accédez à l'application dans votre navigateur :** [http://localhost:4200/](http://localhost:4200/)
-![](site1.png)
