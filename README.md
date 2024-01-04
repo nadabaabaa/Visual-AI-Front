@@ -19,4 +19,3 @@ Le système d'authentification garantit un accès sécurisé aux fonctionnalité
 3. **Installez les dépendances :** `npm install`
 4. **Lancez l'application :** `ng serve`
 5. **Accédez à l'application dans votre navigateur :** [http://localhost:4200/](http://localhost:4200/)
-"C:\Users\nadab\Pictures\Screenshots\Capture d'écran 2024-01-04 162048.png"
